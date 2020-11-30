@@ -81,6 +81,7 @@ $preference->auto_return = "approved";
 
 $preference->items = array($item);
 $preference->payer = $payer;
+$preference->notification_url = $_ENV["NOTIFICATIONS_URL"];
 
 $preference->save();
 
