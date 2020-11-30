@@ -10,7 +10,7 @@ $json = file_get_contents("php://input");
 $data = json_decode($json);
 
 if (isset($data->type)) {
-    $filename = "./logs/logs.txt";
+    $filename = "logs.txt";
     $file = fopen($filename, "a");
     fwrite($file, json_encode($data) . PHP_EOL);
 
