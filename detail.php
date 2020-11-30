@@ -69,7 +69,7 @@ $preference->payment_methods = [
     ],
     "installments" => 6
 ];
-
+$preference->external_reference = "asael.hernandez@codebase.com.mx";
 
 $preference->back_urls = array(
     "success" => $_ENV["SUCCESS_PAYMENT_URL"],
@@ -86,7 +86,6 @@ $preference->notification_url = $_ENV["NOTIFICATIONS_URL"];
 $preference->save();
 
 // Setting up MP payment details
-$payment->notification_url = $_ENV["NOTIFICATIONS_URL"];
 $payment->payer = $payer;
 
 $payment->save();
